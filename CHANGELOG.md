@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.4-alpha.0...v0.0.4) (2022-08-18)
+
+
+### Features
+
+* **rimraff:** added rimraff to a clean npm script to be run with build ([cf0cb2c](https://github.com/Omri-Levy/dry-express-responses/commit/cf0cb2c08a7bfc7831d168257c0057592563448c))
+
 ### 0.0.4-alpha.0 (2022-08-18)
 
 
