@@ -6,7 +6,7 @@
   "scripts": {
 	"release": "standard-version",
 	"commitizen:init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
-	"prepare": "husky install",
+	"prepare": "npx husky install",
 	"commit": "git add . && git-cz",
 	"lint": "eslint src/**/*.{js,ts}",
 	"format": "prettier src/**/*.{js,ts}"
