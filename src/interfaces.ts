@@ -8,3 +8,14 @@ export interface DryResponses {
 	notFound: (data: any) => void;
 	internalServerError: (data: any) => void;
 }
+
+export interface FormattedError {
+	field?: string;
+	message: string;
+}
+
+export interface GenerateResponse {
+	data?: any;
+	message?: string;
+	errors?: Array<FormattedError> | FormattedError;
+}
