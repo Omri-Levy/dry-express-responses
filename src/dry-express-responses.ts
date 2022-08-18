@@ -22,8 +22,14 @@ export const dryExpressResponses = (
 		StatusCodes.UNAUTHORIZED,
 	);
 	// 403 Forbidden
+	res.forbidden = generateResponse(res, StatusCodes.FORBIDDEN);
 	// 404 Not Found
+	res.notFound = generateResponse(res, StatusCodes.NOT_FOUND);
 	// 500 Internal Server Error
+	res.internalServerError = generateResponse(
+		res,
+		StatusCodes.INTERNAL_SERVER_ERROR,
+	);
 
 	next();
 };
