@@ -17,6 +17,10 @@ export const dryExpressResponses = (
 	// 400 Bad Request
 	res.badRequest = generateResponse(res, StatusCodes.BAD_REQUEST);
 	// 401 Unauthorized
+	res.unauthorized = generateResponse(
+		res,
+		StatusCodes.UNAUTHORIZED,
+	);
 	// 403 Forbidden
 	// 404 Not Found
 	// 500 Internal Server Error
