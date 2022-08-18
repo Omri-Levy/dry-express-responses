@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
 	"lib": [
-	  "ESNext"
+	  "es6",
+	  "DOM",
+	  "DOM.Iterable"
 	],
 	"rootDir": "src",
-	"module": "esnext",
-	"target": "esnext",
+	"module": "commonjs",
+	"target": "es5",
 	"strict": true,
 	"forceConsistentCasingInFileNames": true,
 	"moduleResolution": "node",
@@ -17,15 +19,17 @@
 	"declarationMap": true,
 	"composite": true,
 	"incremental": true,
+	"esModuleInterop": true,
 	// "bun-types" is the important part
 	"types": [
-	  "bun-types",
+	  "bun-types"
 	]
   },
   "include": [
 	"src/**/*.ts"
   ],
   "exclude": [
-	"node_modules"
+	"node_modules",
+	"dist"
   ]
 }
