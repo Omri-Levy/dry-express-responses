@@ -1,24 +1,23 @@
 import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { generateResponse } from './generate-response';
+import { GenerateResponse } from './interfaces';
 
 declare module 'express' {
 	export interface Response {
-		ok(data: any): void;
+		ok(payload: Omit<GenerateResponse, 'errors'>): void;
 
-		created(data: any): void;
+		created(payload: Omit<GenerateResponse, 'errors'>): void;
 
-		found(data: any): void;
+		badRequest(payload: GenerateResponse): void;
 
-		badRequest(data: any): void;
+		unauthorized(payload: GenerateResponse): void;
 
-		unauthorized(data: any): void;
+		forbidden(payload: GenerateResponse): void;
 
-		forbidden(data: any): void;
+		notFound(payload: GenerateResponse): void;
 
-		notFound(data: any): void;
-
-		internalServerError(data: any): void;
+		internalServerError(payload: GenerateResponse): void;
 	}
 }
 
@@ -31,8 +30,6 @@ export const dryExpressResponses = (
 	res.ok = generateResponse(res, StatusCodes.OK);
 	// 201 Created
 	res.created = generateResponse(res, StatusCodes.CREATED);
-	// 302 Found
-	res.found = generateResponse(res, StatusCodes.MOVED_TEMPORARILY);
 	// 400 Bad Request
 	res.badRequest = generateResponse(res, StatusCodes.BAD_REQUEST);
 	// 401 Unauthorized
