@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
 	"lib": [
-	  "es6",
-	  "DOM",
-	  "DOM.Iterable"
+	  "ESNext",
 	],
 	"rootDir": "src",
 	"module": "commonjs",
@@ -19,12 +17,11 @@
 	"declarationMap": true,
 	"composite": true,
 	"incremental": true,
-	"esModuleInterop": true,
-	// "bun-types" is the important part
-	"types": [
-	  "bun-types"
-	]
+	"esModuleInterop": true
   },
+  "files": [
+	"src/lib.d.ts"
+  ],
   "include": [
 	"src/**/*.ts"
   ],
