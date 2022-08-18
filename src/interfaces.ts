@@ -1,3 +1,5 @@
+import { Response } from 'express';
+
 export interface FormattedError {
 	field?: string;
 	message: string;
@@ -9,7 +11,7 @@ export interface GenerateResponse {
 	errors?: Array<FormattedError> | FormattedError;
 }
 
-export interface DryResponse {
+export interface DryResponse extends Response {
 	ok(payload: Omit<GenerateResponse, 'errors'>): void;
 
 	created(payload: Omit<GenerateResponse, 'errors'>): void;
