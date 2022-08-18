@@ -1,6 +1,7 @@
 import type { NextFunction, Request, Response } from 'express';
 import type { DryResponses } from './interfaces';
-import { ReasonPhrases, StatusCodes } from 'http-status-codes';
+import { StatusCodes } from 'http-status-codes';
+import { generateResponse } from './generate-response';
 
 export const dryExpressResponses = (
 	req: Request,
@@ -8,13 +9,9 @@ export const dryExpressResponses = (
 	next: NextFunction,
 ) => {
 	// 200 OK
-	res.ok = (data?: any, message?: string) =>
-		res.status(StatusCodes.OK).send({
-			status: ReasonPhrases.OK,
-			data,
-			message,
-		});
+	res.ok = generateResponse(res, StatusCodes.OK);
 	// 201 Created
+	res.created = generateResponse(res, StatusCodes.CREATED);
 	// 302 Found
 	// 400 Bad Request
 	// 401 Unauthorized
