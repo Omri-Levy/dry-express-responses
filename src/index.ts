@@ -1,3 +1,5 @@
-import { hello } from './init';
+import { dryExpressResponses } from './dryExpressResponses';
+import type { DryResponses } from './interfaces';
 
-export { hello };
+export { dryExpressResponses };
+export type { DryResponses };
