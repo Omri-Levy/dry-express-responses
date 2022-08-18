@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.5...v0.0.6) (2022-08-18)
+
+
+### Bug Fixes
+
+* **packaging:** fixing types and configs for npm publish ([70939ff](https://github.com/Omri-Levy/dry-express-responses/commit/70939ff90b187d6ea1c0795f4cec729624ba2ec4))
+
 ### [0.0.5](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.4...v0.0.5) (2022-08-18)
 
 
