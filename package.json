@@ -2,7 +2,7 @@
   "author": "Omri Levy",
   "private": false,
   "name": "dry-express-responses",
-  "version": "0.0.3",
+  "version": "0.0.4-alpha.0",
   "module": "true",
   "main": "dist/index.js",
   "license": "ISC",
