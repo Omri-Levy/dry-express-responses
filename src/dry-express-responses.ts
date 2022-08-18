@@ -13,6 +13,7 @@ export const dryExpressResponses = (
 	// 201 Created
 	res.created = generateResponse(res, StatusCodes.CREATED);
 	// 302 Found
+	res.found = generateResponse(res, StatusCodes.MOVED_TEMPORARILY);
 	// 400 Bad Request
 	// 401 Unauthorized
 	// 403 Forbidden
