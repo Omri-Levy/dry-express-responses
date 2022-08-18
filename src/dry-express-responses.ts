@@ -15,6 +15,7 @@ export const dryExpressResponses = (
 	// 302 Found
 	res.found = generateResponse(res, StatusCodes.MOVED_TEMPORARILY);
 	// 400 Bad Request
+	res.badRequest = generateResponse(res, StatusCodes.BAD_REQUEST);
 	// 401 Unauthorized
 	// 403 Forbidden
 	// 404 Not Found
