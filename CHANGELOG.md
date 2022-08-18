@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.14...v0.0.15) (2022-08-18)
+
+
+### Bug Fixes
+
+* **dist:** fixed dist being outdated ([6863ca9](https://github.com/Omri-Levy/dry-express-responses/commit/6863ca9668ae11c696fdc4cce81c892112cd793d))
+* **dryresponse type:** fixed dist not being up to date ([90b1dc3](https://github.com/Omri-Levy/dry-express-responses/commit/90b1dc3a615712c132c58e3f51c14ea7cfabbd9b))
+
 ### [0.0.14](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.13...v0.0.14) (2022-08-18)
 
 
