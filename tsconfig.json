@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
 	"lib": [
-	  "ESNext",
+	  "ESNext"
 	],
 	"rootDir": "src",
 	"module": "commonjs",
@@ -15,15 +15,13 @@
 	"outDir": "dist",
 	"declaration": true,
 	"declarationMap": true,
-	"composite": true,
-	"incremental": true,
-	"esModuleInterop": true
+	"esModuleInterop": true,
+	"types": [
+	  "bun-types"
+	]
   },
-  "files": [
-	"src/lib.d.ts"
-  ],
   "include": [
-	"src/**/*.ts"
+	"src/**/*.ts",
   ],
   "exclude": [
 	"node_modules"
