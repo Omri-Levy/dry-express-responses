@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.4...v0.0.5) (2022-08-18)
+
+
+### Bug Fixes
+
+* **typescript:** fixed the types on the response object ([3e84759](https://github.com/Omri-Levy/dry-express-responses/commit/3e84759201421a6f86fc01a77a1b519df27f9a6c))
+
 ### [0.0.4](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.4-alpha.0...v0.0.4) (2022-08-18)
 
 
