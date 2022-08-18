@@ -1,11 +1,10 @@
 import { NextFunction, Request, Response } from 'express';
-import { DryResponses } from './interfaces';
 import { StatusCodes } from 'http-status-codes';
 import { generateResponse } from './generate-response';
 
 export const dryExpressResponses = (
 	req: Request,
-	res: Response & DryResponses,
+	res: Response,
 	next: NextFunction,
 ) => {
 	// 200 OK
@@ -31,5 +30,5 @@ export const dryExpressResponses = (
 		StatusCodes.INTERNAL_SERVER_ERROR,
 	);
 
-	next();
+	return next();
 };

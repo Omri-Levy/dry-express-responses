@@ -10,16 +10,16 @@
 	"forceConsistentCasingInFileNames": true,
 	"moduleResolution": "node",
 	"skipLibCheck": true,
-	"incremental": true,
 	"importHelpers": true,
 	"isolatedModules": true,
 	"outDir": "dist",
 	"declaration": true,
 	"declarationMap": true,
 	"composite": true,
+	"incremental": true,
 	// "bun-types" is the important part
 	"types": [
-	  "bun-types"
+	  "bun-types",
 	]
   },
   "include": [
