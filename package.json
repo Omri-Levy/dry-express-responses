@@ -1,8 +1,37 @@
 {
   "name": "dry-express-responses",
   "version": "0.0.3",
-  "module": "src/index.js",
+  "module": "dist/dry-express-responses.esm.js",
+  "main": "dist/dry-express-responses.cjs.js",
+  "scripts": {
+	"release": "standard-version",
+	"commitizen:init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
+	"prepare": "husky install",
+	"commit": "git add . && git-cz",
+	"lint": "eslint src/**/*.{js,ts}",
+	"format": "prettier src/**/*.{js,ts}"
+  },
+  "config": {
+	"commitizen": {
+	  "path": "./node_modules/cz-conventional-changelog"
+	}
+  },
   "devDependencies": {
-    "bun-types": "latest"
+	"@commitlint/cli": "^17.0.3",
+	"@commitlint/config-conventional": "^17.0.3",
+	"@preconstruct/cli": "^2.2.1",
+	"@types/express": "^4.17.13",
+	"@typescript-eslint/eslint-plugin": "^5.33.1",
+	"@typescript-eslint/parser": "^5.33.1",
+	"bun-types": "latest",
+	"commitizen": "^4.2.5",
+	"cz-conventional-changelog": "^3.3.0",
+	"editorconfig": "^0.15.3",
+	"eslint": "^8.22.0",
+	"eslint-config-prettier": "^8.5.0",
+	"husky": "^8.0.1",
+	"prettier": "^2.7.1",
+	"standard-version": "^9.5.0",
+	"tslib": "^2.4.0"
   }
 }
