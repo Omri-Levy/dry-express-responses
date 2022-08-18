@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.11](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.10...v0.0.11) (2022-08-18)
+
+
+### Bug Fixes
+
+* **github actions / tsconfig:** removed bun-types as it is unused ([ee31087](https://github.com/Omri-Levy/dry-express-responses/commit/ee3108728eeefd4d0edff431d917d4da42b52493))
+
 ### [0.0.10](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.9...v0.0.10) (2022-08-18)
 
 
