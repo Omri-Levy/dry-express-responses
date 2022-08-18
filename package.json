@@ -4,12 +4,14 @@
   "module": "dist/dry-express-responses.esm.js",
   "main": "dist/dry-express-responses.cjs.js",
   "scripts": {
+	"build": "preconstruct build",
 	"release": "standard-version",
 	"commitizen:init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
 	"prepare": "husky install",
 	"commit": "git add . && git-cz",
 	"lint": "eslint src/**/*.{js,ts}",
-	"format": "prettier src/**/*.{js,ts}"
+	"format": "prettier src/**/*.{js,ts}",
+	"typecheck": "tsc --noEmit"
   },
   "config": {
 	"commitizen": {

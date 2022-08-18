@@ -1,20 +1,29 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
-    "module": "esnext",
-    "target": "esnext",
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "incremental": true,
-    "importHelpers": true,
-    "isolatedModules": true,
-    "outDir": "dist",
-    "declaration": true,
-    "declarationMap": true,
-    "declarationDir": "dist",
-    "composite": true,
-    // "bun-types" is the important part
-    "types": ["bun-types"]
-  }
+	"lib": [
+	  "ESNext"
+	],
+	"module": "esnext",
+	"target": "esnext",
+	"strict": true,
+	"forceConsistentCasingInFileNames": true,
+	"skipLibCheck": true,
+	"incremental": true,
+	"importHelpers": true,
+	"isolatedModules": true,
+	"outDir": "dist",
+	"declaration": true,
+	"declarationMap": true,
+	"composite": true,
+	// "bun-types" is the important part
+	"types": [
+	  "bun-types"
+	]
+  },
+  "include": [
+	"src/**/*.ts"
+  ],
+  "exclude": [
+	"node_modules"
+  ]
 }
