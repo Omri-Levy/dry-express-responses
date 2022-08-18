@@ -1,13 +1,5 @@
-## Getting Started
-
-### Cloning the repo
-
-```sh
-bun create blank ./NAME_HERE
-```
-
-### Execute a file (eg. src/index.js)
-    
-```sh
-bun run ./src/index.js
-```
+A small ExpressJS middleware written in TypeScript that wraps around
+http-status-codes to send consistent responses, reducing the instances
+of
+res.status, res.send and having to pass a status code and
+its associated message.

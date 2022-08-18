@@ -1,4 +1,4 @@
-import type { Response } from 'express';
+import { Response } from 'express';
 import { getReasonPhrase, StatusCodes } from 'http-status-codes';
 import { GenerateResponse } from './interfaces';
 

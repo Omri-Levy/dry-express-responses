@@ -1,6 +1,6 @@
 import { dryExpressResponses } from './dry-express-responses';
 import { generateResponse } from './generate-response';
-import type {
+import {
 	DryResponses,
 	FormattedError,
 	GenerateResponse,

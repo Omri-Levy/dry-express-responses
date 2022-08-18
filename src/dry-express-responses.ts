@@ -1,5 +1,5 @@
-import type { NextFunction, Request, Response } from 'express';
-import type { DryResponses } from './interfaces';
+import { NextFunction, Request, Response } from 'express';
+import { DryResponses } from './interfaces';
 import { StatusCodes } from 'http-status-codes';
 import { generateResponse } from './generate-response';
 
