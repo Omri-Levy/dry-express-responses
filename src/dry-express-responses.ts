@@ -1,25 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { generateResponse } from './generate-response';
-import { GenerateResponse } from './interfaces';
-
-declare module 'express' {
-	export interface Response {
-		ok(payload: Omit<GenerateResponse, 'errors'>): void;
-
-		created(payload: Omit<GenerateResponse, 'errors'>): void;
-
-		badRequest(payload: GenerateResponse): void;
-
-		unauthorized(payload: GenerateResponse): void;
-
-		forbidden(payload: GenerateResponse): void;
-
-		notFound(payload: GenerateResponse): void;
-
-		internalServerError(payload: GenerateResponse): void;
-	}
-}
 
 export const dryExpressResponses = (
 	req: Request,
