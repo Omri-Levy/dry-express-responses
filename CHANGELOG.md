@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.20](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.19...v0.0.20) (2022-08-19)
+
+
+### Bug Fixes
+
+* **typescript paths:** trying to fix paths for package consumers ([ce6e231](https://github.com/Omri-Levy/dry-express-responses/commit/ce6e231352e04d08309bf13175cfba45a416dd85))
+
 ### [0.0.19](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.18...v0.0.19) (2022-08-19)
 
 
