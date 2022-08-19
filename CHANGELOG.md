@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.18](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.17...v0.0.18) (2022-08-19)
+
+
+### Features
+
+* **errors:** added error helpers ([2516c8b](https://github.com/Omri-Levy/dry-express-responses/commit/2516c8b5ea23738150772231e8be5ac0e15ac6d9))
+
 ### [0.0.17](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.16...v0.0.17) (2022-08-18)
 
 ### [0.0.16](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.15...v0.0.16) (2022-08-18)
