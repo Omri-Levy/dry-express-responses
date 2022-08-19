@@ -1,7 +1,6 @@
 import type { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import { generateResponse } from '@utils';
-import { reasonPhraseToCamelCase } from '../utils/reason-phrase-to-camel-case';
+import { generateResponse, reasonPhraseToCamelCase } from '@utils';
 
 export const dryExpressResponses = (
 	req: Request,
