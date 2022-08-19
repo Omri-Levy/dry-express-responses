@@ -19,6 +19,7 @@ specifiers:
   standard-version: ^9.5.0
   ts-patch: ^2.0.2
   tslib: ^2.4.0
+  ttypescript: ^1.5.13
   typescript-transform-paths: ^3.3.1
   yup: ^0.32.11
   zod: ^3.18.0
@@ -46,6 +47,7 @@ devDependencies:
   standard-version: 9.5.0
   ts-patch: 2.0.2_typescript@4.7.4
   tslib: 2.4.0
+  ttypescript: 1.5.13_6oasmw356qmm23djlsjgkwvrtm
   typescript-transform-paths: 3.3.1_typescript@4.7.4
 
 packages:
@@ -3245,6 +3247,18 @@ packages:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
+      typescript: 4.7.4
+    dev: true
+
+  /ttypescript/1.5.13_6oasmw356qmm23djlsjgkwvrtm:
+    resolution: {integrity: sha512-KT/RBfGGlVJFqEI8cVvI3nMsmYcFvPSZh8bU0qX+pAwbi7/ABmYkzn7l/K8skw0xmYjVCoyaV6WLsBQxdadybQ==}
+    hasBin: true
+    peerDependencies:
+      ts-node: '>=8.0.2'
+      typescript: '>=3.2.2'
+    dependencies:
+      resolve: 1.22.1
+      ts-node: 10.9.1_z5yog5l5yqinvqran22gqy2vdi
       typescript: 4.7.4
     dev: true
 
