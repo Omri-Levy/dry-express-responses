@@ -8,7 +8,8 @@ import type { ResponsePayload } from '@interfaces';
  * @param status - The HTTP status code using http-status-codes.
  */
 export const generateResponse =
-	(res: Response, status: StatusCodes) =>
+	(res: Response) =>
+	(status: StatusCodes) =>
 	({ data, message, errors }: ResponsePayload) =>
 		res.status(status).send({
 			status: getReasonPhrase(status),

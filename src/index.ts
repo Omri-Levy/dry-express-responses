@@ -1,10 +1,10 @@
 import type {
-	DryResponse,
 	FormattedError,
+	ResponseOverloads,
 	ResponsePayload,
 } from '@interfaces';
 import { dryExpressErrors, dryExpressResponses } from '@middleware';
-import { generateResponse } from '@helpers';
+import { generateResponse, reasonPhraseToCamelCase } from '@utils';
 import {
 	BadRequestError,
 	DryError,
@@ -15,12 +15,13 @@ import {
 	YupValidationError,
 	ZodValidationError,
 } from '@errors';
-import type { FormattedErrors } from '@types';
+import type { DryResponse, FormattedErrors } from '@types';
 
 export {
 	dryExpressResponses,
 	dryExpressErrors,
 	generateResponse,
+	reasonPhraseToCamelCase,
 	DryError,
 	BadRequestError,
 	NotFoundError,
@@ -35,4 +36,5 @@ export type {
 	FormattedError,
 	FormattedErrors,
 	ResponsePayload,
+	ResponseOverloads,
 };
