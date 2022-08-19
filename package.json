@@ -27,10 +27,10 @@
   "scripts": {
 	"test": "echo \"Will add tests soon\"",
 	"clean": "rimraf dist",
-	"build:esm": "ttsc --project ./tsconfig.json",
-	"build:cjs": "ttsc --project ./tsconfig.cjs.json",
+	"build:esm": "tsc --project ./tsconfig.json",
+	"build:cjs": "tsc --project ./tsconfig.cjs.json",
 	"build": "pnpm clean && pnpm build:esm && pnpm build:cjs",
-	"watch": "ttsc --project ./tsconfig.json -w",
+	"watch": "tsc --project ./tsconfig.json -w",
 	"release": "pnpm build && standard-version && git push --follow-tags origin main && npm publish",
 	"commitizen:init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
 	"prepare": "husky install",
