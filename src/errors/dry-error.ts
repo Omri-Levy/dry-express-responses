@@ -1,4 +1,4 @@
-import { FormattedError } from '../interfaces';
+import { FormattedError } from '@interfaces';
 import { StatusCodes } from 'http-status-codes';
 
 export abstract class DryError extends Error {

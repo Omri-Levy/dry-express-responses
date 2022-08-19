@@ -1,4 +1,4 @@
-import { ValidationError } from 'yup';
+import type { ValidationError } from 'yup';
 import { DryError } from './dry-error';
 import { StatusCodes } from 'http-status-codes';
 
@@ -10,7 +10,7 @@ export class YupValidationError extends DryError {
 	) {
 		super(`Invalid request parameters.`);
 
-		Object.setPrototypeOf(this, ValidationError.prototype);
+		Object.setPrototypeOf(this, YupValidationError.prototype);
 	}
 
 	serializeErrors() {

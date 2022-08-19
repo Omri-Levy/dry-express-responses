@@ -1,6 +1,6 @@
-import { ErrorRequestHandler } from 'express';
+import type { ErrorRequestHandler } from 'express';
 import { getReasonPhrase, StatusCodes } from 'http-status-codes';
-import { DryError } from '../errors/dry-error';
+import { DryError } from '@errors';
 
 export const dryExpressErrors: ErrorRequestHandler = (
 	err,

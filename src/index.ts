@@ -1,10 +1,10 @@
-import {
+import type {
 	DryResponse,
 	FormattedError,
 	ResponsePayload,
-} from './interfaces';
-import { dryExpressErrors, dryExpressResponses } from './middleware';
-import { generateResponse } from './utils';
+} from '@interfaces';
+import { dryExpressErrors, dryExpressResponses } from '@middleware';
+import { generateResponse } from '@helpers';
 import {
 	BadRequestError,
 	DryError,
@@ -14,8 +14,8 @@ import {
 	UnauthorizedError,
 	YupValidationError,
 	ZodValidationError,
-} from './errors';
-import { FormattedErrors } from './types';
+} from '@errors';
+import type { FormattedErrors } from '@types';
 
 export {
 	dryExpressResponses,

@@ -1,4 +1,4 @@
-import { ZodError } from 'zod';
+import type { ZodError } from 'zod';
 import { DryError } from './dry-error';
 import { StatusCodes } from 'http-status-codes';
 

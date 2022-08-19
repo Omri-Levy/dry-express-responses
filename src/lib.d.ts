@@ -1,4 +1,4 @@
-import { ResponsePayload } from './interfaces';
+import type { ResponsePayload } from '@interfaces';
 
 declare global {
 	declare namespace Express {
