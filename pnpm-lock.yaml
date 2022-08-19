@@ -18,6 +18,8 @@ specifiers:
   rimraf: ^3.0.2
   standard-version: ^9.5.0
   tslib: ^2.4.0
+  ttypescript: ^1.5.13
+  typescript-transform-paths: ^3.3.1
   yup: ^0.32.11
   zod: ^3.18.0
 
@@ -43,6 +45,8 @@ devDependencies:
   rimraf: 3.0.2
   standard-version: 9.5.0
   tslib: 2.4.0
+  ttypescript: 1.5.13_6oasmw356qmm23djlsjgkwvrtm
+  typescript-transform-paths: 3.3.1_typescript@4.7.4
 
 packages:
 
@@ -3173,6 +3177,18 @@ packages:
       typescript: 4.7.4
     dev: true
 
+  /ttypescript/1.5.13_6oasmw356qmm23djlsjgkwvrtm:
+    resolution: {integrity: sha512-KT/RBfGGlVJFqEI8cVvI3nMsmYcFvPSZh8bU0qX+pAwbi7/ABmYkzn7l/K8skw0xmYjVCoyaV6WLsBQxdadybQ==}
+    hasBin: true
+    peerDependencies:
+      ts-node: '>=8.0.2'
+      typescript: '>=3.2.2'
+    dependencies:
+      resolve: 1.22.1
+      ts-node: 10.9.1_z5yog5l5yqinvqran22gqy2vdi
+      typescript: 4.7.4
+    dev: true
+
   /type-check/0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -3207,6 +3223,15 @@ packages:
 
   /typedarray/0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
+    dev: true
+
+  /typescript-transform-paths/3.3.1_typescript@4.7.4:
+    resolution: {integrity: sha512-c+8Cqd2rsRtTU68rJI0NX/OtqgBDddNs1fIxm1nCNyhn0WpoyqtpUxc1w9Ke5c5kgE4/OT5xYbKf2cf694RYEg==}
+    peerDependencies:
+      typescript: '>=3.6.5'
+    dependencies:
+      minimatch: 3.1.2
+      typescript: 4.7.4
     dev: true
 
   /typescript/4.7.4:

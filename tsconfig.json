@@ -1,39 +1,52 @@
 {
   "compilerOptions": {
 	"lib": [
-	  "ESNext"
+	  "esnext",
+	  "dom",
+	  "dom.iterable"
 	],
+	"module": "ESNext",
+	"target": "ESNext",
+	"outDir": "dist/esm",
+	"sourceMap": true,
 	"rootDir": "src",
-	"module": "commonjs",
-	"target": "es5",
+	"allowSyntheticDefaultImports": true,
 	"strict": true,
 	"forceConsistentCasingInFileNames": true,
 	"moduleResolution": "node",
 	"skipLibCheck": true,
 	"importHelpers": true,
 	"isolatedModules": true,
-	"outDir": "dist",
 	"declaration": true,
 	"declarationMap": true,
 	"esModuleInterop": true,
 	"baseUrl": "./",
 	"paths": {
 	  "@errors": [
-		"src/errors"
+		"./src/errors"
 	  ],
 	  "@types": [
-		"src/types"
+		"./src/types"
 	  ],
 	  "@interfaces": [
-		"src/interfaces"
+		"./src/interfaces"
 	  ],
 	  "@middleware": [
-		"src/middleware"
+		"./src/middleware"
 	  ],
 	  "@helpers": [
-		"src/helpers"
+		"./src/helpers"
 	  ]
-	}
+	},
+	"plugins": [
+	  {
+		"transform": "typescript-transform-paths"
+	  },
+	  {
+		"transform": "typescript-transform-paths",
+		"afterDeclarations": true
+	  }
+	]
   },
   "include": [
 	"src/**/*.ts"
