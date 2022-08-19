@@ -12,24 +12,24 @@ Create a file in src called dry-express-responses.d.ts and copy the
 following content, this is required for the types to work.
 
 ```typescript
-import {GenerateResponse} from 'dry-express-responses';
+import {ResponsePayload} from 'dry-express-responses';
 
 declare global {
 	declare namespace Express {
 		export interface Response {
-			ok(payload: Omit<GenerateResponse, 'errors'>): void;
+			ok(payload: Omit<ResponsePayload, 'errors'>): void;
 
-			created(payload: Omit<GenerateResponse, 'errors'>): void;
+			created(payload: Omit<ResponsePayload, 'errors'>): void;
 
-			badRequest(payload: GenerateResponse): void;
+			badRequest(payload: ResponsePayload): void;
 
-			unauthorized(payload: GenerateResponse): void;
+			unauthorized(payload: ResponsePayload): void;
 
-			forbidden(payload: GenerateResponse): void;
+			forbidden(payload: ResponsePayload): void;
 
-			notFound(payload: GenerateResponse): void;
+			notFound(payload: ResponsePayload): void;
 
-			internalServerError(payload: GenerateResponse): void;
+			internalServerError(payload: ResponsePayload): void;
 		}
 	}
 }

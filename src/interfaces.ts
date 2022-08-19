@@ -5,24 +5,24 @@ export interface FormattedError {
 	message: string;
 }
 
-export interface GenerateResponse {
+export interface ResponsePayload {
 	data?: any;
 	message?: string;
-	errors?: Array<FormattedError> | FormattedError;
+	errors?: Array<FormattedError>;
 }
 
 export interface DryResponse extends Response {
-	ok(payload: Omit<GenerateResponse, 'errors'>): void;
+	ok(payload: Omit<ResponsePayload, 'errors'>): void;
 
-	created(payload: Omit<GenerateResponse, 'errors'>): void;
+	created(payload: Omit<ResponsePayload, 'errors'>): void;
 
-	badRequest(payload: GenerateResponse): void;
+	badRequest(payload: ResponsePayload): void;
 
-	unauthorized(payload: GenerateResponse): void;
+	unauthorized(payload: ResponsePayload): void;
 
-	forbidden(payload: GenerateResponse): void;
+	forbidden(payload: ResponsePayload): void;
 
-	notFound(payload: GenerateResponse): void;
+	notFound(payload: ResponsePayload): void;
 
-	internalServerError(payload: GenerateResponse): void;
+	internalServerError(payload: ResponsePayload): void;
 }

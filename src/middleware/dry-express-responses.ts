@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import { generateResponse } from './generate-response';
+import { generateResponse } from '../utils/generate-response';
 
 export const dryExpressResponses = (
 	req: Request,
