@@ -37,7 +37,7 @@
 	"commit": "git add . && git-cz",
 	"lint": "eslint ./src/**/*.{js,ts}",
 	"format": "prettier ./src/**/*.{js,ts}",
-	"typecheck": "ttsc --noEmit --project ./tsconfig.json"
+	"typecheck": "tsc --noEmit --project ./tsconfig.json"
   },
   "config": {
 	"commitizen": {
