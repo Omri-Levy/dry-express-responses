@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
 	"lib": [
 	  "esnext",
@@ -7,46 +8,7 @@
 	],
 	"module": "ESNext",
 	"target": "ESNext",
-	"outDir": "dist/esm",
-	"sourceMap": true,
-	"rootDir": "src",
-	"allowSyntheticDefaultImports": true,
-	"strict": true,
-	"forceConsistentCasingInFileNames": true,
-	"moduleResolution": "node",
-	"skipLibCheck": true,
-	"importHelpers": true,
-	"isolatedModules": true,
-	"declaration": true,
-	"declarationMap": true,
-	"esModuleInterop": true,
-	"baseUrl": "./",
-	"paths": {
-	  "@errors": [
-		"./src/errors"
-	  ],
-	  "@types": [
-		"./src/types"
-	  ],
-	  "@interfaces": [
-		"./src/interfaces"
-	  ],
-	  "@middleware": [
-		"./src/middleware"
-	  ],
-	  "@helpers": [
-		"./src/helpers"
-	  ]
-	},
-	"plugins": [
-	  {
-		"transform": "typescript-transform-paths"
-	  },
-	  {
-		"transform": "typescript-transform-paths",
-		"afterDeclarations": true
-	  }
-	]
+	"outDir": "./dist/esm",
   },
   "include": [
 	"src/**/*.ts"
