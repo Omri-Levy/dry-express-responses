@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.27](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.26...v0.0.27) (2022-08-19)
+
+### [0.0.26](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.25...v0.0.26) (2022-08-19)
+
+### [0.0.25](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.24...v0.0.25) (2022-08-19)
+
+
+### Features
+
+* **branches:** added a dev branch ([e41008c](https://github.com/Omri-Levy/dry-express-responses/commit/e41008cc9cd2331f82cf089e79108f340f93a17f))
+
+
+### Bug Fixes
+
+* **github actions:** fixed the typecheck npm script ([65fbe3f](https://github.com/Omri-Levy/dry-express-responses/commit/65fbe3f6a256fab1b4d888269e0c9de8d2cc9c77))
+
 ### [0.0.24](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.23...v0.0.24) (2022-08-19)
 
 ### [0.0.23](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.22...v0.0.23) (2022-08-19)
