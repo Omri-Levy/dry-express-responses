@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.23](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.22...v0.0.23) (2022-08-19)
+
+
+### Bug Fixes
+
+* **package.json types path:** fixed incorrect path ([7369b56](https://github.com/Omri-Levy/dry-express-responses/commit/7369b566394ce4aed937a3c98d3114baf421b32c))
+
 ### [0.0.22](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.21...v0.0.22) (2022-08-19)
 
 
