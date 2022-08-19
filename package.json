@@ -31,7 +31,7 @@
 	"build:cjs": "ttsc --project ./tsconfig.cjs.json",
 	"build": "pnpm clean && pnpm build:esm && pnpm build:cjs",
 	"watch": "ttsc --project ./tsconfig.json -w",
-	"release": "pnpm build && standard-version && git push --follow-tags origin main && npm publish",
+	"release": "pnpm build && standard-version && git push --follow-tags origin $(git branch) && npm publish",
 	"commitizen:init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
 	"prepare": "husky install",
 	"commit": "git add . && git-cz",
