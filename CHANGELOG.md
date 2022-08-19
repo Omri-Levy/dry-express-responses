@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.28](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.27...v0.0.28) (2022-08-19)
+
+
+### Bug Fixes
+
+* **github actions pnpm install:** now using the --no-frozen-lockfile flag to avoid ci only issues ([259257e](https://github.com/Omri-Levy/dry-express-responses/commit/259257ed581dca1cad39d0fdbeb6a23f0aa4a64c))
+
 ### [0.0.27](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.26...v0.0.27) (2022-08-19)
 
 ### [0.0.26](https://github.com/Omri-Levy/dry-express-responses/compare/v0.0.25...v0.0.26) (2022-08-19)
