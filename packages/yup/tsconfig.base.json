@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-	"composite": true,
 	"sourceMap": true,
 	"rootDir": "src",
 	"allowSyntheticDefaultImports": true,
@@ -31,13 +30,5 @@
 		"../errors"
 	  ]
 	}
-  },
-  "references": [
-	{
-	  "path": "../types"
-	},
-	{
-	  "path": "../errors"
-	}
-  ]
+  }
 }
