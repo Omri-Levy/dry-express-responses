@@ -14,9 +14,6 @@
 	"type": "git",
 	"url": "https://github.com/Omri-Levy/dry-express-responses"
   },
-  "publishConfig": {
-	"access": "public"
-  },
   "sideEffects": false,
   "description": "ExpressJS middleware to reduce boilerplate in response creation",
   "keywords": [
