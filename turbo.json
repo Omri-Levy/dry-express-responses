@@ -1,0 +1,51 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+	"clean": {
+	  "outputs": []
+	},
+	"build:esm": {
+	  "dependsOn": [
+		"^clean",
+		"^build:esm"
+	  ],
+	  "outputs": [
+		"dist/**"
+	  ]
+	},
+	"build:cjs": {
+	  "dependsOn": [
+		"^clean",
+		"^build:cjs"
+	  ],
+	  "outputs": [
+		"dist/**"
+	  ]
+	},
+	"test": {
+	  "dependsOn": [
+		"build"
+	  ],
+	  "outputs": [],
+	  "inputs": [
+		"src/**/*.ts",
+		"src/**/*.test.ts"
+	  ]
+	},
+	"lint": {
+	  "outputs": []
+	},
+	"format": {
+	  "outputs": []
+	},
+	"deploy": {
+	  "dependsOn": [
+		"build",
+		"test",
+		"lint",
+		"format"
+	  ],
+	  "outputs": []
+	}
+  }
+}

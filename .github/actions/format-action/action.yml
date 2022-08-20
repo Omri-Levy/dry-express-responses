@@ -1,0 +1,18 @@
+name: Format
+description: Format the project
+
+runs:
+  using: composite
+  steps:
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn
+
+    - name: Format
+      shell: bash
+      run: yarn format

@@ -1,0 +1,18 @@
+name: Typecheck
+description: Typecheck the project
+
+runs:
+  using: composite
+  steps:
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn
+
+    - name: Typecheck
+      shell: bash
+      run: yarn typecheck

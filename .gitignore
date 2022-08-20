@@ -6,3 +6,6 @@ logs
 .idea
 *.tsbuildinfo
 *.tgz
+.vscode
+coverage
+.turbo
