@@ -35,7 +35,9 @@ importers:
       prettier: ^2.7.1
       rimraf: ^3.0.2
       semantic-release: ^19.0.3
+      ts-patch: ^2.0.2
       tslib: ^2.4.0
+      typescript-transform-paths: ^3.3.1
     dependencies:
       http-status-codes: 2.2.0
     devDependencies:
@@ -53,7 +55,9 @@ importers:
       prettier: 2.7.1
       rimraf: 3.0.2
       semantic-release: 19.0.3
+      ts-patch: 2.0.2_typescript@4.7.4
       tslib: 2.4.0
+      typescript-transform-paths: 3.3.1_typescript@4.7.4
 
   packages/errors:
     specifiers:
@@ -72,7 +76,9 @@ importers:
       prettier: ^2.7.1
       rimraf: ^3.0.2
       semantic-release: ^19.0.3
+      ts-patch: ^2.0.2
       tslib: ^2.4.0
+      typescript-transform-paths: ^3.3.1
     dependencies:
       http-status-codes: 2.2.0
     devDependencies:
@@ -90,7 +96,9 @@ importers:
       prettier: 2.7.1
       rimraf: 3.0.2
       semantic-release: 19.0.3
+      ts-patch: 2.0.2_typescript@4.7.4
       tslib: 2.4.0
+      typescript-transform-paths: 3.3.1_typescript@4.7.4
 
   packages/types:
     specifiers:
@@ -106,7 +114,9 @@ importers:
       eslint-plugin-promise: ^6.0.0
       prettier: ^2.7.1
       rimraf: ^3.0.2
+      ts-patch: ^2.0.2
       tslib: ^2.4.0
+      typescript-transform-paths: ^3.3.1
     devDependencies:
       '@types/express': 4.17.13
       '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
@@ -120,7 +130,9 @@ importers:
       eslint-plugin-promise: 6.0.0_eslint@8.22.0
       prettier: 2.7.1
       rimraf: 3.0.2
+      ts-patch: 2.0.2_typescript@4.7.4
       tslib: 2.4.0
+      typescript-transform-paths: 3.3.1_typescript@4.7.4
 
   packages/yup:
     specifiers:
@@ -139,7 +151,9 @@ importers:
       prettier: ^2.7.1
       rimraf: ^3.0.2
       semantic-release: ^19.0.3
+      ts-patch: ^2.0.2
       tslib: ^2.4.0
+      typescript-transform-paths: ^3.3.1
       yup: ^0.32.11
     dependencies:
       '@dry-express-responses/errors': link:../errors
@@ -159,7 +173,9 @@ importers:
       prettier: 2.7.1
       rimraf: 3.0.2
       semantic-release: 19.0.3
+      ts-patch: 2.0.2_typescript@4.7.4
       tslib: 2.4.0
+      typescript-transform-paths: 3.3.1_typescript@4.7.4
 
   packages/zod:
     specifiers:
@@ -178,7 +194,9 @@ importers:
       prettier: ^2.7.1
       rimraf: ^3.0.2
       semantic-release: ^19.0.3
+      ts-patch: ^2.0.2
       tslib: ^2.4.0
+      typescript-transform-paths: ^3.3.1
       zod: ^3.18.0
     dependencies:
       '@dry-express-responses/errors': link:../errors
@@ -198,7 +216,9 @@ importers:
       prettier: 2.7.1
       rimraf: 3.0.2
       semantic-release: 19.0.3
+      ts-patch: 2.0.2_typescript@4.7.4
       tslib: 2.4.0
+      typescript-transform-paths: 3.3.1_typescript@4.7.4
 
 packages:
 
@@ -1099,6 +1119,12 @@ packages:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
+    dev: true
+
+  /brace-expansion/2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
     dev: true
 
   /braces/3.0.2:
@@ -2224,6 +2250,17 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
+  /glob/8.0.3:
+    resolution: {integrity: sha512-ull455NHSHI/Y1FqGaaYFaLGkNMMJbavMrEGFXG/PGrg6y7sutWHUHrz6gy6WEBH6akM1M414dWKCNs+IhKdiQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.0
+      once: 1.4.0
+    dev: true
+
   /global-dirs/0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
     engines: {node: '>=4'}
@@ -2248,6 +2285,15 @@ packages:
       homedir-polyfill: 1.0.3
       ini: 1.3.8
       is-windows: 1.0.2
+      which: 1.3.1
+    dev: true
+
+  /global-prefix/3.0.0:
+    resolution: {integrity: sha512-awConJSVCHVGND6x3tmMaKcQvwXLhjdkmomy2W+Goaui8YPgYgXJZewhg3fWC+DlfqqQuWg8AwqjGTD2nAPVWg==}
+    engines: {node: '>=6'}
+    dependencies:
+      ini: 1.3.8
+      kind-of: 6.0.3
       which: 1.3.1
     dev: true
 
@@ -2476,6 +2522,11 @@ packages:
       get-intrinsic: 1.1.2
       has: 1.0.3
       side-channel: 1.0.4
+    dev: true
+
+  /interpret/1.4.0:
+    resolution: {integrity: sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==}
+    engines: {node: '>= 0.10'}
     dev: true
 
   /into-stream/6.0.0:
@@ -2933,6 +2984,13 @@ packages:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
     dependencies:
       brace-expansion: 1.1.11
+    dev: true
+
+  /minimatch/5.1.0:
+    resolution: {integrity: sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
     dev: true
 
   /minimist-options/4.1.0:
@@ -3448,6 +3506,13 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /rechoir/0.6.2:
+    resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      resolve: 1.22.1
+    dev: true
+
   /redent/3.0.0:
     resolution: {integrity: sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg==}
     engines: {node: '>=8'}
@@ -3663,6 +3728,16 @@ packages:
   /shebang-regex/3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+    dev: true
+
+  /shelljs/0.8.5:
+    resolution: {integrity: sha512-TiwcRcrkhHvbrZbnRcFYMLl30Dfov3HKqzp5tO5b4pt6G/SezKcYhmDg15zXVBswHmctSAQKznqNW2LO5tTDow==}
+    engines: {node: '>=4'}
+    hasBin: true
+    dependencies:
+      glob: 7.2.3
+      interpret: 1.4.0
+      rechoir: 0.6.2
     dev: true
 
   /side-channel/1.0.4:
@@ -3958,6 +4033,22 @@ packages:
       yn: 3.1.1
     dev: true
 
+  /ts-patch/2.0.2_typescript@4.7.4:
+    resolution: {integrity: sha512-NbgdS/J/ylaARJVaF1w4cPw378yvw6C1026fU5NKC2GO4jCwRlkuE/G7gwknNMHwkAOhwamKjuzkuLw/u4KlBg==}
+    hasBin: true
+    peerDependencies:
+      typescript: '>=4.0.0'
+    dependencies:
+      chalk: 4.1.2
+      glob: 8.0.3
+      global-prefix: 3.0.0
+      minimist: 1.2.6
+      resolve: 1.22.1
+      shelljs: 0.8.5
+      strip-ansi: 6.0.1
+      typescript: 4.7.4
+    dev: true
+
   /tsconfig-paths/3.14.1:
     resolution: {integrity: sha512-fxDhWnFSLt3VuTwtvJt5fpwxBHg5AdKWMsgcPOOIilyjymcYVZoCQF8fvFRezCNfblEXmi+PcM1eYHeOAgXCOQ==}
     dependencies:
@@ -4158,6 +4249,15 @@ packages:
   /type-fest/1.4.0:
     resolution: {integrity: sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==}
     engines: {node: '>=10'}
+    dev: true
+
+  /typescript-transform-paths/3.3.1_typescript@4.7.4:
+    resolution: {integrity: sha512-c+8Cqd2rsRtTU68rJI0NX/OtqgBDddNs1fIxm1nCNyhn0WpoyqtpUxc1w9Ke5c5kgE4/OT5xYbKf2cf694RYEg==}
+    peerDependencies:
+      typescript: '>=3.6.5'
+    dependencies:
+      minimatch: 3.1.2
+      typescript: 4.7.4
     dev: true
 
   /typescript/4.7.4:

@@ -12,6 +12,21 @@
 	"declaration": true,
 	"declarationMap": true,
 	"esModuleInterop": true,
-	"baseUrl": "./"
+	"baseUrl": "./",
+	"plugins": [
+	  {
+		"transform": "typescript-transform-paths"
+	  },
+	  {
+		"transform": "typescript-transform-paths",
+		"afterDeclarations": true
+	  }
+	],
+	"paths": {
+	  "@dry-express-responses/*": [
+		"../packages"
+	  ]
+	}
   }
 }
+

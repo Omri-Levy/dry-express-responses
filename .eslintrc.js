@@ -5,12 +5,9 @@ module.exports = {
 	},
 	extends: [`standard-with-typescript`, `prettier`],
 	overrides: [],
-	parserOptions: {
-		ecmaVersion: `latest`,
-		sourceType: `module`,
-		project: `./tsconfig.json`,
-	},
 	rules: {
+		'@typescript-eslint/method-signature-style': `off`,
+		'@typescript-eslint/explicit-function-return-type': `off`,
 		quotes: [`error`, `backtick`],
 		'array-callback-return': `off`,
 		'prefer-template': `error`,

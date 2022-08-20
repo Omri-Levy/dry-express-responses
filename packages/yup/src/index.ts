@@ -1,1 +1,1 @@
-export {YupValidationError} from './yup-validation-error';
+export { YupValidationError } from './yup-validation-error';

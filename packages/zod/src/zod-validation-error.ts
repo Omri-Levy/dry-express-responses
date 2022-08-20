@@ -5,6 +5,7 @@ import { StatusCodes } from 'http-status-codes';
 export class ZodValidationError extends DryError {
 	status = StatusCodes.BAD_REQUEST;
 
+	// eslint-disable-next-line n/handle-callback-err
 	constructor(public error: ZodError) {
 		super(`Invalid request parameters.`);
 

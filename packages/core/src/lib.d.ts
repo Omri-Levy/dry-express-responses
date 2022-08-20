@@ -3,9 +3,9 @@ import type { ResponsePayload } from '@dry-express-responses/types';
 declare global {
 	declare namespace Express {
 		export interface Response {
-			ok(payload: Omit<ResponsePayload, 'errors'>): void;
+			ok(payload: Omit<ResponsePayload, `errors`>): void;
 
-			created(payload: Omit<ResponsePayload, 'errors'>): void;
+			created(payload: Omit<ResponsePayload, `errors`>): void;
 
 			badRequest(payload: ResponsePayload): void;
 

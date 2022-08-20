@@ -5,9 +5,8 @@ import { StatusCodes } from 'http-status-codes';
 export class YupValidationError extends DryError {
 	status = StatusCodes.BAD_REQUEST;
 
-	constructor(
-		public error: ValidationError | Array<ValidationError>,
-	) {
+	// eslint-disable-next-line n/handle-callback-err
+	constructor(public error: ValidationError | ValidationError[]) {
 		super(`Invalid request parameters.`);
 
 		Object.setPrototypeOf(this, YupValidationError.prototype);

@@ -6,21 +6,21 @@ export interface FormattedError {
 export interface ResponsePayload {
 	data?: any;
 	message?: string;
-	errors?: Array<FormattedError>;
+	errors?: FormattedError[];
 }
 
 export interface ResponseOverloads {
-	ok(payload: Omit<ResponsePayload, 'errors'>): void;
+	ok: (payload: Omit<ResponsePayload, `errors`>) => void;
 
-	created(payload: Omit<ResponsePayload, 'errors'>): void;
+	created: (payload: Omit<ResponsePayload, `errors`>) => void;
 
-	badRequest(payload: ResponsePayload): void;
+	badRequest: (payload: ResponsePayload) => void;
 
-	unauthorized(payload: ResponsePayload): void;
+	unauthorized: (payload: ResponsePayload) => void;
 
-	forbidden(payload: ResponsePayload): void;
+	forbidden: (payload: ResponsePayload) => void;
 
-	notFound(payload: ResponsePayload): void;
+	notFound: (payload: ResponsePayload) => void;
 
-	internalServerError(payload: ResponsePayload): void;
+	internalServerError: (payload: ResponsePayload) => void;
 }

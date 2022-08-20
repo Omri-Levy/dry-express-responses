@@ -10,5 +10,7 @@ export abstract class DryError extends Error {
 		Object.setPrototypeOf(this, DryError.prototype);
 	}
 
-	abstract serializeErrors(): Array<Partial<FormattedError>>;
+	abstract serializeErrors(): Array<
+		Pick<FormattedError, `message`>
+	>;
 }
