@@ -24,7 +24,6 @@ importers:
       '@types/express': ^4.17.13
       '@typescript-eslint/eslint-plugin': ^5.33.1
       '@typescript-eslint/parser': ^5.33.1
-      cz-conventional-changelog: ^3.3.0
       editorconfig: ^0.15.3
       eslint: ^8.0.1
       eslint-config-prettier: ^8.5.0
@@ -44,7 +43,6 @@ importers:
       '@types/express': 4.17.13
       '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
       '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
-      cz-conventional-changelog: 3.3.0
       editorconfig: 0.15.3
       eslint: 8.22.0
       eslint-config-prettier: 8.5.0_eslint@8.22.0
