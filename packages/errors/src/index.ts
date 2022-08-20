@@ -4,3 +4,4 @@ export { InternalServerError } from './internal-server-error';
 export { NotFoundError } from './not-found-error';
 export { UnauthorizedError } from './unauthorized-error';
 export { DryError } from './dry-error';
+export { dryExpressErrors } from './dry-express-errors';
