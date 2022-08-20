@@ -3,7 +3,7 @@
   "sideEffects": false,
   "private": false,
   "name": "@dry-express-responses/errors",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -26,6 +26,7 @@
     "status"
   ],
   "scripts": {
+    "release": "pnpm build && pnpm publish --access public",
     "prepare": "ts-patch install -s",
     "test": "echo \"Will add tests soon\"",
     "clean": "rimraf dist",

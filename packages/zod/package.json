@@ -64,5 +64,9 @@
 	"@dry-express-responses/errors": "workspace:*",
 	"http-status-codes": "^2.2.0",
 	"zod": "^3.18.0"
+  },
+  "peerDependencies": {
+	"@dry-express-responses/errors": "*",
+	"zod": "^3.18.0"
   }
 }
