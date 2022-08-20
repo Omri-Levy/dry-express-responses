@@ -24,7 +24,7 @@
 	],
 	"paths": {
 	  "@dry-express-responses/*": [
-		"../packages"
+		"../"
 	  ]
 	}
   }
