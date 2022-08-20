@@ -26,6 +26,7 @@
 	"status"
   ],
   "scripts": {
+	"release": "pnpm build && pnpm publish --access public",
 	"prepare": "ts-patch install -s",
 	"test": "echo \"Will add tests soon\"",
 	"clean": "rimraf dist",
