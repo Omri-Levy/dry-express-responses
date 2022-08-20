@@ -23,8 +23,11 @@
 	  }
 	],
 	"paths": {
-	  "@dry-express-responses/*": [
-		"../"
+	  "@dry-express-responses/types": [
+		"../types"
+	  ],
+	  "@dry-express-responses/errors": [
+		"../errors"
 	  ]
 	}
   }
