@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+	"sourceMap": true,
+	"rootDir": "src",
+	"allowSyntheticDefaultImports": true,
+	"strict": true,
+	"forceConsistentCasingInFileNames": true,
+	"moduleResolution": "node",
+	"skipLibCheck": true,
+	"importHelpers": true,
+	"isolatedModules": true,
+	"declaration": true,
+	"declarationMap": true,
+	"esModuleInterop": true,
+	"plugins": [
+	  {
+		"transform": "typescript-transform-paths"
+	  },
+	  {
+		"transform": "typescript-transform-paths",
+		"afterDeclarations": true
+	  }
+	],
+	"paths": {
+	  "@dry-express-responses/types": [
+		"../types"
+	  ]
+	}
+  }
+}
