@@ -31,7 +31,7 @@
 	"build:cjs": "tsc --project tsconfig.cjs.json",
 	"build": "pnpm clean && pnpm build:esm && pnpm build:cjs",
 	"watch": "tsc --project tsconfig.json -w",
-	"lint": "eslint ./src/**/*.{js,ts}",
+	"lint": "eslint ./src/**/*.{js,ts} --fix",
 	"format": "prettier ./src/**/*.{js,ts}",
 	"typecheck": "tsc --noEmit --project tsconfig.json"
   },

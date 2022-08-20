@@ -4,6 +4,9 @@
 	"clean": {
 	  "outputs": []
 	},
+	"typecheck": {
+	  "outputs": []
+	},
 	"build:esm": {
 	  "dependsOn": [
 		"^clean",
