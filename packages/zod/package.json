@@ -25,6 +25,9 @@
 	"http",
 	"status"
   ],
+  "publishConfig": {
+	"access": "public"
+  },
   "scripts": {
 	"prepare": "ts-patch install -s",
 	"test": "echo \"Will add tests soon\"",
