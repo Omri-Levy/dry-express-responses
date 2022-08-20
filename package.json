@@ -1,6 +1,6 @@
 {
   "author": "Omri Levy",
-  "private": false,
+  "private": true,
   "name": "dry-express-responses",
   "version": "0.0.29",
   "main": "dist/cjs/index.js",
