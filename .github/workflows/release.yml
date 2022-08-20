@@ -4,26 +4,32 @@ on:
   pull_request:
     branches:
       - main
-      
+
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.32.2
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn
+        shell: bash
+        run: pnpm install
 
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: pnpm dlx semantic-release
