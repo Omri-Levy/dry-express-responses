@@ -2,7 +2,7 @@
   "author": "Omri Levy",
   "private": false,
   "name": "@dry-express-responses/zod",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "@dry-express-responses/errors": "workspace:*",
+    "express-async-errors": "^3.1.1",
     "http-status-codes": "^2.2.0",
     "zod": "^3.18.0"
   }
