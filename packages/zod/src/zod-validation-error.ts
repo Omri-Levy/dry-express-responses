@@ -1,3 +1,4 @@
+import 'express-async-errors';
 import type { ZodError } from 'zod';
 import { DryError } from '@dry-express-responses/errors';
 import { StatusCodes } from 'http-status-codes';
