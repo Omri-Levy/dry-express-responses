@@ -1,5 +1,3 @@
-import 'express-async-errors';
-
 export { BadRequestError } from './bad-request-error';
 export { ForbiddenError } from './forbidden-error';
 export { InternalServerError } from './internal-server-error';

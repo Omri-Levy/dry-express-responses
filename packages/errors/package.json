@@ -3,7 +3,7 @@
   "sideEffects": false,
   "private": false,
   "name": "@dry-express-responses/errors",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -63,7 +63,6 @@
     "typescript-transform-paths": "^3.3.1"
   },
   "dependencies": {
-    "express-async-errors": "^3.1.1",
     "http-status-codes": "^2.2.0"
   }
 }
