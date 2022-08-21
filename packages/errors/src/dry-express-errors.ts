@@ -1,4 +1,3 @@
-import 'express-async-errors';
 import type { ErrorRequestHandler } from 'express';
 import { getReasonPhrase, StatusCodes } from 'http-status-codes';
 import { DryError } from './dry-error';
