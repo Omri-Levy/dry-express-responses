@@ -2,7 +2,7 @@
   "author": "Omri Levy",
   "private": false,
   "name": "@dry-express-responses/yup",
-  "version": "0.0.33",
+  "version": "0.0.34",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -64,10 +64,6 @@
   "dependencies": {
     "@dry-express-responses/errors": "workspace:*",
     "http-status-codes": "^2.2.0",
-    "yup": "^0.32.11"
-  },
-  "peerDependencies": {
-    "@dry-express-responses/errors": "*",
     "yup": "^0.32.11"
   }
 }
