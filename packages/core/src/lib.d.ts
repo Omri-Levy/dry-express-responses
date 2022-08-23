@@ -1,21 +1,29 @@
-import type { ResponsePayload } from '@dry-express-responses/types';
+import {
+	BadRequest,
+	Created,
+	Forbidden,
+	InternalServerError,
+	NotFound,
+	Ok,
+	Unauthorized,
+} from '@dry-express-responses/types';
 
 declare global {
 	declare namespace Express {
 		export interface Response {
-			ok(payload: Omit<ResponsePayload, `errors`>): void;
+			ok: Ok;
 
-			created(payload: Omit<ResponsePayload, `errors`>): void;
+			created: Created;
 
-			badRequest(payload: ResponsePayload): void;
+			badRequest: BadRequest;
 
-			unauthorized(payload: ResponsePayload): void;
+			unauthorized: Unauthorized;
 
-			forbidden(payload: ResponsePayload): void;
+			forbidden: Forbidden;
 
-			notFound(payload: ResponsePayload): void;
+			notFound: NotFound;
 
-			internalServerError(payload: ResponsePayload): void;
+			internalServerError: InternalServerError;
 		}
 	}
 }

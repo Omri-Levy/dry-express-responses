@@ -37,24 +37,32 @@ Create a file in src called dry-express-responses.d.ts and copy the
 following content, this is required for the types to work.
 
 ```typescript
-import {ResponsePayload} from '@dry-express-responses/core';
+import {
+	BadRequest,
+	Created,
+	Forbidden,
+	InternalServerError,
+	NotFound,
+	Ok,
+	Unauthorized,
+} from '@dry-express-responses/types';
 
 declare global {
 	declare namespace Express {
 		export interface Response {
-			ok(payload: Omit<ResponsePayload, 'errors'>): void;
+			ok: Ok;
 
-			created(payload: Omit<ResponsePayload, 'errors'>): void;
+			created: Created;
 
-			badRequest(payload: ResponsePayload): void;
+			badRequest: BadRequest;
 
-			unauthorized(payload: ResponsePayload): void;
+			unauthorized: Unauthorized;
 
-			forbidden(payload: ResponsePayload): void;
+			forbidden: Forbidden;
 
-			notFound(payload: ResponsePayload): void;
+			notFound: NotFound;
 
-			internalServerError(payload: ResponsePayload): void;
+			internalServerError: InternalServerError;
 		}
 	}
 }
@@ -64,7 +72,10 @@ declare global {
 
 ```typescript
 import {dryExpressResponses} from '@dry-express-responses/core';
-import {dryExpressErrors, BadRequestError} from '@dry-express-responses/errors';
+import {
+	dryExpressErrors,
+	BadRequestError
+} from '@dry-express-responses/errors';
 import {ZodValidationError} from '@dry-express-responses/zod';
 import express from 'express';
 // Can be used with yup instead
@@ -99,11 +110,12 @@ app.put('/validate', (req, res) => {
 		kebab: z.object({}),
 	});
 
-	const result = schema.safeParse({ kebab: 'wrong type!' });
+	const result = schema.safeParse({kebab: 'wrong type!'});
 
 	if (!result.success) {
 		throw new ZodValidationError(result.error);
-	};
+	}
+	;
 });
 
 // Has to be placed after all the routes and middleware

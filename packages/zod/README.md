@@ -37,24 +37,32 @@ Create a file in src called dry-express-responses.d.ts and copy the
 following content, this is required for the types to work.
 
 ```typescript
-import {ResponsePayload} from '@dry-express-responses/core';
+import {
+	BadRequest,
+	Created,
+	Forbidden,
+	InternalServerError,
+	NotFound,
+	Ok,
+	Unauthorized,
+} from '@dry-express-responses/types';
 
 declare global {
 	declare namespace Express {
 		export interface Response {
-			ok(payload: Omit<ResponsePayload, 'errors'>): void;
+			ok: Ok;
 
-			created(payload: Omit<ResponsePayload, 'errors'>): void;
+			created: Created;
 
-			badRequest(payload: ResponsePayload): void;
+			badRequest: BadRequest;
 
-			unauthorized(payload: ResponsePayload): void;
+			unauthorized: Unauthorized;
 
-			forbidden(payload: ResponsePayload): void;
+			forbidden: Forbidden;
 
-			notFound(payload: ResponsePayload): void;
+			notFound: NotFound;
 
-			internalServerError(payload: ResponsePayload): void;
+			internalServerError: InternalServerError;
 		}
 	}
 }
