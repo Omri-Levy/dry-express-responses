@@ -2,6 +2,43 @@ lockfileVersion: 5.4
 
 importers:
 
+  packages/types:
+    specifiers:
+      '@types/express': ^4.17.13
+      '@typescript-eslint/eslint-plugin': ^5.33.1
+      '@typescript-eslint/parser': ^5.33.1
+      editorconfig: ^0.15.3
+      eslint: ^8.0.1
+      eslint-config-prettier: ^8.5.0
+      eslint-config-standard-with-typescript: ^22.0.0
+      eslint-plugin-import: ^2.25.2
+      eslint-plugin-n: ^15.0.0
+      eslint-plugin-promise: ^6.0.0
+      http-status-codes: ^2.2.0
+      prettier: ^2.7.1
+      rimraf: ^3.0.2
+      ts-patch: ^2.0.2
+      tslib: ^2.4.0
+      typescript-transform-paths: ^3.3.1
+    dependencies:
+      http-status-codes: 2.2.0
+    devDependencies:
+      '@types/express': 4.17.13
+      '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
+      '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
+      editorconfig: 0.15.3
+      eslint: 8.22.0
+      eslint-config-prettier: 8.5.0_eslint@8.22.0
+      eslint-config-standard-with-typescript: 22.0.0_3h5ldndkk65qnwn3f43n6efjze
+      eslint-plugin-import: 2.26.0_3bh5nkk7utn7e74vrwtv6rxmt4
+      eslint-plugin-n: 15.2.4_eslint@8.22.0
+      eslint-plugin-promise: 6.0.0_eslint@8.22.0
+      prettier: 2.7.1
+      rimraf: 3.0.2
+      ts-patch: 2.0.2_typescript@4.7.4
+      tslib: 2.4.0
+      typescript-transform-paths: 3.3.1_typescript@4.7.4
+
   packages/yup:
     specifiers:
       '@dry-express-responses/errors': workspace:*

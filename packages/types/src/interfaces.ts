@@ -3,24 +3,30 @@ export interface FormattedError {
 	message: string;
 }
 
-export interface ResponsePayload {
-	data?: any;
+export interface ResponsePayload<TData> {
+	data?: TData;
 	message?: string;
 	errors?: FormattedError[];
 }
 
 export interface ResponseOverloads {
-	ok: (payload: Omit<ResponsePayload, `errors`>) => void;
+	ok: <TData>(
+		payload: Omit<ResponsePayload<TData>, `errors`>,
+	) => void;
 
-	created: (payload: Omit<ResponsePayload, `errors`>) => void;
+	created: <TData>(
+		payload: Omit<ResponsePayload<TData>, `errors`>,
+	) => void;
 
-	badRequest: (payload: ResponsePayload) => void;
+	badRequest: <TData>(payload: ResponsePayload<TData>) => void;
 
-	unauthorized: (payload: ResponsePayload) => void;
+	unauthorized: <TData>(payload: ResponsePayload<TData>) => void;
 
-	forbidden: (payload: ResponsePayload) => void;
+	forbidden: <TData>(payload: ResponsePayload<TData>) => void;
 
-	notFound: (payload: ResponsePayload) => void;
+	notFound: <TData>(payload: ResponsePayload<TData>) => void;
 
-	internalServerError: (payload: ResponsePayload) => void;
+	internalServerError: <TData>(
+		payload: ResponsePayload<TData>,
+	) => void;
 }

@@ -1,6 +1,6 @@
 import type { Response } from 'express';
 import { getReasonPhrase, StatusCodes } from 'http-status-codes';
-import type { ResponsePayload } from '@dry-express-responses/types';
+import { GenerateResponse } from '@dry-express-responses/types';
 
 /**
  * Reduces the use of res.status() and res.send(), standardizes the response with a consistent format in addition to TypeScript typing, while allowing data and a message to be passed in.
@@ -8,11 +8,14 @@ import type { ResponsePayload } from '@dry-express-responses/types';
  * @param status - The HTTP status code using http-status-codes.
  */
 export const generateResponse =
-	(res: Response, status: StatusCodes) =>
-	({ data, message, errors }: ResponsePayload) =>
+	<TStatus extends StatusCodes>(res: Response, status: TStatus) =>
+	// Only has errors if status is not OK or CREATED.
+	<TData>(
+		payload:
+			| GenerateResponse<TStatus, TData>
+			| Record<never, never> = {},
+	) =>
 		res.status(status).send({
 			status: getReasonPhrase(status),
-			data,
-			message,
-			errors,
+			...payload,
 		});
