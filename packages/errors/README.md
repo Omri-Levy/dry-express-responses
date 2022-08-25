@@ -45,7 +45,7 @@ import {
 	NotFound,
 	Ok,
 	Unauthorized,
-} from '@dry-express-responses/types';
+} from '@dry-express-responses/core';
 
 declare global {
 	declare namespace Express {
@@ -72,7 +72,10 @@ declare global {
 
 ```typescript
 import {dryExpressResponses} from '@dry-express-responses/core';
-import {dryExpressErrors, BadRequestError} from '@dry-express-responses/errors';
+import {
+	dryExpressErrors,
+	BadRequestError
+} from '@dry-express-responses/errors';
 import {ZodValidationError} from '@dry-express-responses/zod';
 import express from 'express';
 // Can be used with yup instead
@@ -107,11 +110,12 @@ app.put('/validate', (req, res) => {
 		kebab: z.object({}),
 	});
 
-	const result = schema.safeParse({ kebab: 'wrong type!' });
+	const result = schema.safeParse({kebab: 'wrong type!'});
 
 	if (!result.success) {
 		throw new ZodValidationError(result.error);
-	};
+	}
+	;
 });
 
 // Has to be placed after all the routes and middleware

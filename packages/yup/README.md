@@ -45,7 +45,7 @@ import {
 	NotFound,
 	Ok,
 	Unauthorized,
-} from '@dry-express-responses/types';
+} from '@dry-express-responses/core';
 
 declare global {
 	declare namespace Express {
