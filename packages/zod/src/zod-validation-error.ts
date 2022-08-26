@@ -15,11 +15,9 @@ export class ZodValidationError extends DryError {
 
 	serializeErrors() {
 		return this.error.issues.map((err) => {
-			const [firstErr] = err.path;
-
 			return {
 				message: err.message,
-				field: firstErr?.toString(),
+				field: err.path?.join(`.`),
 			};
 		});
 	}

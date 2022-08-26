@@ -3,7 +3,7 @@
   "private": false,
   "sideEffects": false,
   "name": "@dry-express-responses/core",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -27,13 +27,12 @@
   ],
   "scripts": {
     "release": "pnpm build && pnpm publish --access public",
-    "prepare": "ts-patch install -s",
     "test": "echo \"Will add tests soon\"",
     "clean": "rimraf dist",
     "build:esm": "tsc --project tsconfig.json",
     "build:cjs": "tsc --project tsconfig.cjs.json",
     "build": "pnpm clean && pnpm build:esm && pnpm build:cjs",
-    "watch": "tsc --project tsconfig.json -w",
+    "watch": "tsc --project tsconfig.cjs.json -w",
     "lint": "eslint './src/**/*.{js,ts}' --fix",
     "format": "prettier './src/**/*.{js,ts}' --write",
     "typecheck": "tsc --noEmit --project tsconfig.json"
@@ -58,9 +57,7 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^19.0.3",
-    "ts-patch": "^2.0.2",
-    "tslib": "^2.4.0",
-    "typescript-transform-paths": "^3.3.1"
+    "tslib": "^2.4.0"
   },
   "dependencies": {
     "http-status-codes": "^2.2.0"

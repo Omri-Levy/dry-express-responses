@@ -1,3 +1,4 @@
+import type { ZodObject } from 'zod';
 import type {
 	FormattedError,
 	ResponseOverloads,
@@ -53,3 +54,22 @@ export type InternalServerError = <TData>(
 		TData
 	>,
 ) => void;
+
+export type RequireOneProperty<
+	T,
+	U = { [TKey in keyof T]: Pick<T, TKey> },
+> = Partial<T> & U[keyof U];
+
+type AnyRecord = Record<PropertyKey, any>;
+
+export type BaseRequestSchema<
+	TBody extends AnyRecord = AnyRecord,
+	TParams extends AnyRecord = AnyRecord,
+	TQuery extends AnyRecord = AnyRecord,
+> = ZodObject<
+	RequireOneProperty<{
+		body: ZodObject<TBody>;
+		params: ZodObject<TParams>;
+		query: ZodObject<TQuery>;
+	}>
+>;

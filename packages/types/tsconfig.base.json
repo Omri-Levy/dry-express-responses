@@ -12,15 +12,6 @@
 	"declaration": true,
 	"declarationMap": true,
 	"esModuleInterop": true,
-	"baseUrl": "./",
-	"plugins": [
-	  {
-		"transform": "typescript-transform-paths"
-	  },
-	  {
-		"transform": "typescript-transform-paths",
-		"afterDeclarations": true
-	  }
-	]
+	"baseUrl": "./"
   }
 }
