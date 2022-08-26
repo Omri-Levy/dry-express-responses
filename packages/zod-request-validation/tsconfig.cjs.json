@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+	"lib": [
+	  "es2015",
+	  "dom",
+	  "dom.iterable"
+	],
+	"module": "CommonJS",
+	"target": "es2015",
+	"outDir": "./dist/cjs"
+  },
+  "include": [
+	"src/**/*.ts"
+  ],
+  "exclude": [
+	"node_modules"
+  ]
+}

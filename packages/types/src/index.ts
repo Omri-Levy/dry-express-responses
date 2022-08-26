@@ -15,4 +15,6 @@ export type {
 	Forbidden,
 	NotFound,
 	InternalServerError,
+	RequireOneProperty,
+	BaseRequestSchema,
 } from './types';
