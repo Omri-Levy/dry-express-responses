@@ -8,15 +8,12 @@ import { SafeParseError, z } from 'zod';
  * @param zodSchema
  * @param req
  */
-export const zSafeParse = async <
-	TRequestSchema extends BaseRequestSchema,
->(
+export const zSafeParse = <TRequestSchema extends BaseRequestSchema>(
 	zodSchema: TRequestSchema,
 	req: Request,
-): Promise<
+):
 	| ({ success: true } & z.infer<TRequestSchema>)
-	| SafeParseError<z.infer<TRequestSchema>>
-> => {
+	| SafeParseError<z.infer<TRequestSchema>> => {
 	const result = zodSchema.safeParse(req);
 
 	if (!result.success) {
