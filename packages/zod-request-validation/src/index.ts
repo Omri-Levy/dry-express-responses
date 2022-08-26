@@ -1,3 +1,4 @@
 import { zParse } from './z-parse';
+import { zSafeParse } from './z-safe-parse';
 
-export { zParse };
+export { zParse, zSafeParse };
