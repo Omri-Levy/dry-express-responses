@@ -2,11 +2,9 @@
 
 - zod - https://github.com/colinhacks/zod
 - yup - https://github.com/jquense/yup
-- http-status-codes
-  - https://github.com/prettymuchbryce/http-status-codes
+- http-status-codes - https://github.com/prettymuchbryce/http-status-codes
 - express - https://github.com/expressjs/express
-- express-async-errors
-  - https://github.com/davidbanham/express-async-errors
+- express-async-errors - https://github.com/davidbanham/express-async-errors
 
 ### Description
 
