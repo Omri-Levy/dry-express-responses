@@ -1,13 +1,11 @@
-**Credit to packages used in this project**
-zod - https://github.com/colinhacks/zod
-yup - https://github.com/jquense/yup
-http-status-codes
-- https://github.com/prettymuchbryce/http-status-codes
-express - https://github.com/expressjs/express
-express-async-errors
-- https://github.com/davidbanham/express-async-errors
-***********
+# Credit to packages used in this project
+- zod - https://github.com/colinhacks/zod
+- yup - https://github.com/jquense/yup
+- http-status-codes - https://github.com/prettymuchbryce/http-status-codes
+- express - https://github.com/expressjs/express
+- express-async-errors - https://github.com/davidbanham/express-async-errors
 
+### Description
 A small ExpressJS middleware written in TypeScript that wraps around
 http-status-codes to send consistent responses, reducing the instances
 of
