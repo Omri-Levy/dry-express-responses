@@ -3,12 +3,6 @@
   "private": false,
   "name": "dry-express-responses",
   "version": "0.0.29",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/cjs/index.d.ts",
-  "files": [
-	"/dist"
-  ],
   "license": "ISC",
   "repository": {
 	"type": "git",
