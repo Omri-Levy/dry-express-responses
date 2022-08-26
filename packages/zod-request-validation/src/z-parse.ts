@@ -9,12 +9,10 @@ import { BaseRequestSchema } from '@dry-express-responses/types';
  * @param zodSchema
  * @param req
  */
-export const zParse = async <
-	TRequestSchema extends BaseRequestSchema,
->(
+export const zParse = <TRequestSchema extends BaseRequestSchema>(
 	zodSchema: TRequestSchema,
 	req: Request,
-): Promise<z.infer<TRequestSchema>> => {
+): z.infer<TRequestSchema> => {
 	try {
 		return zodSchema.parse(req);
 	} catch (err) {

@@ -1,3 +1,13 @@
+**Credit to packages used in this project**
+zod - https://github.com/colinhacks/zod
+yup - https://github.com/jquense/yup
+http-status-codes
+- https://github.com/prettymuchbryce/http-status-codes
+express - https://github.com/expressjs/express
+express-async-errors
+- https://github.com/davidbanham/express-async-errors
+***********
+
 A small ExpressJS middleware written in TypeScript that wraps around
 http-status-codes to send consistent responses, reducing the instances
 of
@@ -11,9 +21,9 @@ its associated message.
 Install dry-express-responses
 
 ```bash
-npm install @dry-express-responses/core
-yarn add @dry-express-responses/core
-pnpm add @dry-express-responses/core
+npm install @dry-express-responses/core @dry-express-responses/types
+yarn add @dry-express-responses/core @dry-express-responses/types
+pnpm add @dry-express-responses/core @dry-express-responses/types
 ```
 
 #### Step 1.2
@@ -26,9 +36,9 @@ errors both @dry-express-responses/errors and
 @dry-express-responses/zod (or yup) are required.
 
 ```bash
-npm install @dry-express-responses/errors @dry-express-responses/zod
-yarn add @dry-express-responses/errors @dry-express-responses/zod
-pnpm add @dry-express-responses/errors @dry-express-responses/zod
+npm install @dry-express-responses/errors @dry-express-responses/zod @dry-express-responses/types
+yarn add @dry-express-responses/errors @dry-express-responses/zod @dry-express-responses/types
+pnpm add @dry-express-responses/errors @dry-express-responses/zod @dry-express-responses/types
 ```
 
 #### Step 2
@@ -45,7 +55,7 @@ import {
 	NotFound,
 	Ok,
 	Unauthorized,
-} from '@dry-express-responses/core';
+} from '@dry-express-responses/types';
 
 declare global {
 	declare namespace Express {
@@ -113,6 +123,7 @@ app.put('/validate', (req, res) => {
 	const result = schema.safeParse({kebab: 'wrong type!'});
 
 	if (!result.success) {
+		// Uses express-async-errors under the hood
 		throw new ZodValidationError(result.error);
 	}
 	;
