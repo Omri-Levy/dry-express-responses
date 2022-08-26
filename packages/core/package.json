@@ -3,7 +3,7 @@
   "private": false,
   "sideEffects": false,
   "name": "@dry-express-responses/core",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/cjs/index.d.ts",
