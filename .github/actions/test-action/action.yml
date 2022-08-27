@@ -16,7 +16,7 @@ runs:
 
     - name: Install dependencies
       shell: bash
-      run: pnpm install --no-frozen-lockfile
+      run: pnpm i --no-frozen-lockfile
 
     - name: Test
       shell: bash
