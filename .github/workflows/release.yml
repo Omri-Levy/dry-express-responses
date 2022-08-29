@@ -33,6 +33,7 @@ jobs:
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
+          commit: 'chore: release package(s)'
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
