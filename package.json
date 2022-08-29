@@ -1,23 +1,12 @@
 {
   "author": "Omri Levy",
-  "private": false,
-  "name": "dry-express-responses",
+  "private": true,
   "version": "0.0.29",
   "license": "ISC",
   "repository": {
 	"type": "git",
 	"url": "https://github.com/Omri-Levy/dry-express-responses"
   },
-  "description": "ExpressJS middleware to reduce boilerplate in response creation",
-  "keywords": [
-	"express",
-	"response",
-	"middleware",
-	"http-status-codes",
-	"typescript",
-	"http",
-	"status"
-  ],
   "scripts": {
 	"commitizen:init": "commitizen init cz-conventional-changelog --save-dev --save-exact",
 	"prepare": "husky install",
