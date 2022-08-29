@@ -3,27 +3,13 @@ import {
 	reasonPhraseToCamelCase,
 	startToCamelCase,
 } from './utils';
-import {
-	badRequest,
-	created,
-	forbidden,
-	internalServerError,
-	notFound,
-	ok,
-	unauthorized,
-} from './responses';
 import { dryExpressResponses } from './dry-express-responses';
+import { dried } from './dry-responses-factory';
 
 export {
 	dryExpressResponses,
 	generateResponse,
 	reasonPhraseToCamelCase,
 	startToCamelCase,
-	ok,
-	created,
-	badRequest,
-	unauthorized,
-	forbidden,
-	notFound,
-	internalServerError,
+	dried,
 };
