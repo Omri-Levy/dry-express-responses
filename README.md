@@ -1,11 +1,15 @@
 # Credit to packages used in this project
+
 - zod - https://github.com/colinhacks/zod
 - yup - https://github.com/jquense/yup
-- http-status-codes - https://github.com/prettymuchbryce/http-status-codes
+- http-status-codes
+	- https://github.com/prettymuchbryce/http-status-codes
 - express - https://github.com/expressjs/express
-- express-async-errors - https://github.com/davidbanham/express-async-errors
+- express-async-errors
+	- https://github.com/davidbanham/express-async-errors
 
 ### Description
+
 A small ExpressJS middleware written in TypeScript that wraps around
 http-status-codes to send consistent responses, reducing the instances
 of
@@ -85,6 +89,10 @@ import {
 	BadRequestError
 } from '@dry-express-responses/errors';
 import {ZodValidationError} from '@dry-express-responses/zod';
+import {
+	zParse,
+	zSafeParse
+} from '@dry-express-responses/zod-request-validation';
 import express from 'express';
 // Can be used with yup instead
 import z from 'zod';
@@ -114,21 +122,85 @@ app.post('/oops', (req, res) => {
 });
 
 app.put('/validate', (req, res) => {
-	const schema = z.object({
-		kebab: z.object({}),
-	});
+	// Validate body/query/params directly and return a typesafe version
+	const result = zSafeParse({
+		body: z.object({
+			email: z.string(),
+		}),
+		query: z.object({
+			id: z.string(),
+		}),
+		params: z.object({
+			color: z.string(),
+		}),
+	}, req);
+	// Or just throw ZodValidationError directly on validation error using zParse
+	const {body} = zParse({
+		body: z.object({
+			email: z.string(),
+		}),
+		query: z.object({
+			id: z.string(),
+		}),
+		params: z.object({
+			color: z.string(),
+		}),
+	}, req);
 
-	const result = schema.safeParse({kebab: 'wrong type!'});
-
+	// Lets zod infer that data exists if success = true
 	if (!result.success) {
 		// Uses express-async-errors under the hood
 		throw new ZodValidationError(result.error);
 	}
-	;
+
+	return res.ok({
+		// Both are typesafe!
+		data: body.email ?? result.body.email,
+	});
 });
 
 // Has to be placed after all the routes and middleware
 app.use(dryExpressErrors);
+
+app.listen(3000, () => console.log('listening on port 3000'));
+```
+
+### Don't want to use a middleware or overload response?
+
+```typescript
+import {dried} from '@dry-express-responses/core';
+import express from 'express';
+
+const app = express();
+
+app.get('/', (req, res) => {
+	dried(res).ok();
+});
+
+// Pass response once!
+app.get('/reuse', (req, res) => {
+	const dry = dried(res);
+
+	if (req.query.foo === 'bar') {
+		return dry.badRequest({
+			message: 'Wrong foo',
+			errors: [
+				{
+					field: 'foo',
+					message: 'Received bar instead of foo!',
+				},
+			],
+		});
+	}
+
+	if (!req.query.foo) {
+		return dry.notFound({
+			message: 'Foo was not found :(',
+		});
+	}
+
+	dry.ok();
+});
 
 app.listen(3000, () => console.log('listening on port 3000'));
 ```
