@@ -1,5 +1,12 @@
 # @dry-express-responses/yup
 
+## 0.0.44
+
+### Patch Changes
+
+- Updated dependencies [841088f]
+  - @dry-express-responses/errors@1.0.0
+
 ## 0.0.43
 
 ### Patch Changes
