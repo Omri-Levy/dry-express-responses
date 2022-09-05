@@ -7,6 +7,8 @@ import type {
 import type {Response} from 'express';
 import type {StatusCodes} from 'http-status-codes';
 
+export type AnyRecord = Record<PropertyKey, any>;
+
 export type FormattedErrors = FormattedError[];
 
 export type DryResponse = ResponseOverloads & Response;
@@ -15,46 +17,45 @@ export type ResponsePayloadNoErrors<TData> = Omit<ResponsePayload<TData>,
 	`errors`>;
 export type GenerateResponse<TStatus extends StatusCodes,
 	TData,
-	> = TStatus extends StatusCodes.OK
-	? ResponsePayloadNoErrors<TData>
+	TPayload extends AnyRecord> = TStatus extends StatusCodes.OK
+	? ResponsePayloadNoErrors<TData> & TPayload
 	: TStatus extends StatusCodes.CREATED
-		? ResponsePayloadNoErrors<TData>
-		: ResponsePayload<TData>;
+		? ResponsePayloadNoErrors<TData> & TPayload
+		: ResponsePayload<TData> & TPayload;
 
-export type Ok = <TData>(
-	payload?: GenerateResponse<StatusCodes.OK, TData>,
+export type Ok = <TData, TPayload extends AnyRecord>(
+	payload?: GenerateResponse<StatusCodes.OK, TData, TPayload>,
 ) => void;
 
-export type Created = <TData>(
-	payload?: GenerateResponse<StatusCodes.CREATED, TData>,
+export type Created = <TData, TPayload extends AnyRecord>(
+	payload?: GenerateResponse<StatusCodes.CREATED, TData, TPayload>,
 ) => void;
 
-export type BadRequest = <TData>(
-	payload?: GenerateResponse<StatusCodes.BAD_REQUEST, TData>,
+export type BadRequest = <TData, TPayload extends AnyRecord>(
+	payload?: GenerateResponse<StatusCodes.BAD_REQUEST, TData, TPayload>,
 ) => void;
 
-export type Unauthorized = <TData>(
-	payload?: GenerateResponse<StatusCodes.UNAUTHORIZED, TData>,
+export type Unauthorized = <TData, TPayload extends AnyRecord>(
+	payload?: GenerateResponse<StatusCodes.UNAUTHORIZED, TData, TPayload>,
 ) => void;
 
-export type Forbidden = <TData>(
-	payload?: GenerateResponse<StatusCodes.FORBIDDEN, TData>,
+export type Forbidden = <TData, TPayload extends AnyRecord>(
+	payload?: GenerateResponse<StatusCodes.FORBIDDEN, TData, TPayload>,
 ) => void;
 
-export type NotFound = <TData>(
-	payload?: GenerateResponse<StatusCodes.NOT_FOUND, TData>,
+export type NotFound = <TData, TPayload extends AnyRecord>(
+	payload?: GenerateResponse<StatusCodes.NOT_FOUND, TData, TPayload>,
 ) => void;
 
-export type InternalServerError = <TData>(
+export type InternalServerError = <TData, TPayload extends AnyRecord>(
 	payload?: GenerateResponse<StatusCodes.INTERNAL_SERVER_ERROR,
-		TData>,
+		TData,
+		TPayload>,
 ) => void;
 
 export type RequireOneProperty<T,
 	U = { [TKey in keyof T]: Pick<T, TKey> },
 	> = Partial<T> & U[keyof U];
-
-type AnyRecord = Record<PropertyKey, any>;
 
 export type BaseRequestSchema<TBody extends AnyRecord = AnyRecord,
 	TParams extends AnyRecord = AnyRecord,

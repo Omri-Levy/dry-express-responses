@@ -1,7 +1,7 @@
-import type { NextFunction, Request, Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
-import { reasonPhraseToCamelCase } from './utils';
-import { dried } from './dry-responses-factory';
+import type {NextFunction, Request, Response} from 'express';
+import {StatusCodes} from 'http-status-codes';
+import {reasonPhraseToCamelCase} from './utils';
+import {dried} from './dry-responses-factory';
 
 /**
  * An ExpressJS middleware that overloads the response object by iterating over the most used status codes using http-status-codes, mapping them to their corresponding method. res.ok = ok(res) etc.

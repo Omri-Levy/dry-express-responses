@@ -17,4 +17,5 @@
 - Updated dependencies [478a56b]
 - Updated dependencies [106fd71]
 - Updated dependencies [bcdfd3a]
-  - @dry-express-responses/errors@0.2.10
+- Updated dependencies [841088f]
+  - @dry-express-responses/errors@1.0.0
