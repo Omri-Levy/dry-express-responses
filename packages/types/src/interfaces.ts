@@ -30,3 +30,8 @@ export interface ResponseOverloads {
 		payload: ResponsePayload<TData>,
 	) => void;
 }
+
+export interface DryExpressErrorsOptions<TPayload> {
+	logger?: (messages: Array<Pick<FormattedError, `message`>>) => void;
+	payload?: TPayload;
+}

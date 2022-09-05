@@ -2,6 +2,7 @@ export type {
 	FormattedError,
 	ResponseOverloads,
 	ResponsePayload,
+	DryExpressErrorsOptions,
 } from './interfaces';
 export type {
 	DryResponse,
