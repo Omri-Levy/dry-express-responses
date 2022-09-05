@@ -1,5 +1,12 @@
 # @dry-express-responses/core
 
+## 4.0.0
+
+### Major Changes
+
+- 14e71d3: Added the ability to pass any data to responses and updated the types accordingly
+- 8988024: Added the ability to pass arbitrary key/value pairs to responses and updated the types accordingly.
+
 ## 3.0.0
 
 ### Major Changes
