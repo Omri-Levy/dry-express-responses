@@ -3,7 +3,7 @@
 	"private": false,
 	"sideEffects": false,
 	"name": "@dry-express-responses/zod-request-validation",
-	"version": "2.0.10",
+	"version": "2.0.11",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/cjs/index.d.ts",

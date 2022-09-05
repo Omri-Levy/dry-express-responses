@@ -1,5 +1,12 @@
 # @dry-express-responses/zod
 
+## 0.0.42
+
+### Patch Changes
+
+- Updated dependencies [841088f]
+  - @dry-express-responses/errors@1.0.0
+
 ## 0.0.41
 
 ### Patch Changes
