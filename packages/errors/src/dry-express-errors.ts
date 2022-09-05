@@ -1,6 +1,6 @@
-import type { ErrorRequestHandler } from 'express';
-import { getReasonPhrase, StatusCodes } from 'http-status-codes';
-import { DryError } from './dry-error';
+import type {ErrorRequestHandler} from 'express';
+import {getReasonPhrase, StatusCodes} from 'http-status-codes';
+import {DryError} from './dry-error';
 
 export const dryExpressErrors: ErrorRequestHandler = (
 	err,
@@ -13,7 +13,10 @@ export const dryExpressErrors: ErrorRequestHandler = (
 
 		console.error(errors);
 
-		return res.status(err.status).send({ errors });
+		return res.status(err.status).send({
+			status: getReasonPhrase(err.status),
+			errors
+		});
 	}
 
 	console.error(err);
