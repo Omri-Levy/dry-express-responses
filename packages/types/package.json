@@ -2,7 +2,7 @@
 	"author": "Omri Levy",
 	"private": false,
 	"name": "@dry-express-responses/types",
-	"version": "0.0.36",
+	"version": "0.0.37",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
 	"types": "dist/cjs/index.d.ts",

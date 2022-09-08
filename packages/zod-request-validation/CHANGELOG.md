@@ -1,5 +1,13 @@
 # @dry-express-responses/zod-request-validation
 
+## 2.0.12
+
+### Patch Changes
+
+- a51d234: Updated README.md to the new dryExpressErrors options
+- Updated dependencies [a51d234]
+  - @dry-express-responses/errors@1.0.1
+  - @dry-express-responses/zod@0.0.43
 
 ## 2.0.11
 
