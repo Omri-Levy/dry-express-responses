@@ -1,5 +1,11 @@
 # @dry-express-responses/core
 
+## 4.0.1
+
+### Patch Changes
+
+- a51d234: Updated README.md to the new dryExpressErrors options
+
 ## 4.0.0
 
 ### Major Changes

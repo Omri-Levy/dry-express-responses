@@ -1,5 +1,11 @@
 # @dry-express-responses/types
 
+## 0.0.37
+
+### Patch Changes
+
+- a51d234: Updated README.md to the new dryExpressErrors options
+
 ## 0.0.36
 
 ### Patch Changes

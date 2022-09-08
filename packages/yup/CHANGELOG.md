@@ -1,5 +1,13 @@
 # @dry-express-responses/yup
 
+## 0.0.45
+
+### Patch Changes
+
+- a51d234: Updated README.md to the new dryExpressErrors options
+- Updated dependencies [a51d234]
+  - @dry-express-responses/errors@1.0.1
+
 ## 0.0.43
 
 ### Patch Changes
