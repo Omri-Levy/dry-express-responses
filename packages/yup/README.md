@@ -160,7 +160,13 @@ app.put('/validate', (req, res) => {
 });
 
 // Has to be placed after all the routes and middleware
-app.use(dryExpressErrors);
+// Has to be placed after all the routes and middleware
+app.use(dryExpressErrors({
+	// Optional, defaults to console.error
+logger: console.log,
+	// Optional data to pass to the response (can be any key/value)
+version: 5
+}));
 
 app.listen(3000, () => console.log('listening on port 3000'));
 ```
